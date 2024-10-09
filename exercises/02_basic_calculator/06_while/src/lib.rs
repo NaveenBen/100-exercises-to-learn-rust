@@ -4,7 +4,15 @@ pub fn factorial(n: u32) -> u32 {
     // interprets as "I'll get back to this later", thus
     // suppressing type errors.
     // It panics at runtime.
-    todo!()
+
+    // The `while` loop is a control flow statement that
+let mut result = 1;
+let mut new_n = n;
+    while new_n > 0 {
+        result *= new_n;
+        new_n -= 1;
+    }
+    result
 }
 
 #[cfg(test)]
